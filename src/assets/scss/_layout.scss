@@ -1,0 +1,39 @@
+.top-bar {
+  width:100%;
+  //height:inherit;
+  //margin: 2.5rem 0;
+  &.is-stuck {
+    border-bottom:1px solid $light-gray;
+    box-shadow: 0 0 1rem 0 rgba(#000,.1);
+    padding:.5rem 0;
+  }
+}
+.top-bar__logo {
+  width:8rem;
+  margin-top: .333rem;
+  //display: none;
+  .is-stuck & {
+    //display: inline-block;
+  }
+}
+
+.top-bar__info {
+  display: block;
+  color:$body-font-color;
+  font-style: normal;
+  font-weight: $global-weight-black;
+  position: absolute;
+  margin-top: 3rem;
+  .is-stuck & {
+    display: none;
+  }
+}
+
+main[role="main"] {
+  //background-color: red;
+  //margin-top:0;
+}
+.ps {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
