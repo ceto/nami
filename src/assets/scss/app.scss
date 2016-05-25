@@ -4,6 +4,8 @@
 @import 'foundation';
 @import 'motion-ui';
 
+@import 'fonts';
+
 @include foundation-global-styles;
 @include foundation-grid;
 // @include foundation-flex-grid;
@@ -49,7 +51,9 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+
 @import 'typography';
 @import 'layout';
+@import 'components/tiles';
 @import 'owl';
 @import 'magnific-popup';

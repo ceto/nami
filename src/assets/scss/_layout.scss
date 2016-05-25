@@ -2,12 +2,21 @@
   width:100%;
   //height:inherit;
   //margin: 2.5rem 0;
+  padding:1rem 0 1rem;
+  @include breakpoint(tablet) {
+    padding: 3.5rem 0 3.5rem 0;
+  }
+
   &.is-stuck {
     border-bottom:1px solid $light-gray;
     box-shadow: 0 0 1rem 0 rgba(#000,.1);
     padding:.5rem 0;
   }
+
+
+
 }
+
 .top-bar__logo {
   width:8rem;
   margin-top: .333rem;
@@ -31,9 +40,35 @@
 
 main[role="main"] {
   //background-color: red;
-  //margin-top:0;
+  position: relative;
+  z-index: -1;
+  margin-top: 3rem;
+
+  @include breakpoint(tablet) {
+      margin-top:-9rem;
+  }
 }
 .ps {
+  @include clearfix();
+  position: relative;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  border-bottom: 1px solid $light-gray;
+  @include breakpoint(tablet) {
+    padding:0;
+  }
+}
+
+.ps__inner {
+  //margin:4rem 0;
+  @include breakpoint(tablet) {
+    margin:32vh 0 18vh;
+    min-height: 50vh;
+    // position: absolute;
+    // left:0;
+    // width:100%;
+    // top: 50%;
+    // transform:translateY(-50%);
+  }
+
 }
