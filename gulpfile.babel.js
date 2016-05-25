@@ -10,6 +10,9 @@ import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 
+
+var ghPages = require('gulp-gh-pages');
+
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
