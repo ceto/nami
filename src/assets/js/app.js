@@ -3,8 +3,8 @@ $(document).foundation();
 $(document).ready(function() {
   $('.owl-plakatok').owlCarousel({
       navigation : true,
-      // navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
-      pagination: false,
+      //navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
+      pagination: true,
       paginationSpeed : 400,
       singleItem:true,
       autoHeight: true,
