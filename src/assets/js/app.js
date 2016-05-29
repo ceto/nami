@@ -1,7 +1,9 @@
 $(document).foundation();
 
 $(document).ready(function() {
-  $('.owl-plakatok').owlCarousel({
+  var carousel = $('.owl-plakatok');
+
+  carousel.owlCarousel({
       navigation : true,
       navigationText: ['<i class="icon icon--arrow-left"></i>','<i class="icon icon--arrow-right"></i>'],
       pagination: true,
@@ -10,8 +12,15 @@ $(document).ready(function() {
       autoHeight: true,
   });
 
+  if (window.location.hash) {
+    $('.top-bar > .row').foundation('scrollToLoc', '#owl-plakatok');
+    var no = window.location.hash.split('#');
+    carousel.trigger('owl.jumpTo', no[1]-1);
+    //alert(no[1]-1);
+  }
 
-$('.owl-plakatok').magnificPopup({
+
+  $('.owl-plakatok').magnificPopup({
     delegate: 'a',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
@@ -28,4 +37,8 @@ $('.owl-plakatok').magnificPopup({
       }
     }
   });
+
+
+
+
 });
