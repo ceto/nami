@@ -13,10 +13,14 @@ body {
   display: inline-block;
   font-style: normal;
   color:inherit;
+  padding:.7rem .875rem .7rem 0;
+  @include breakpoint(tablet) {
+    padding:.7rem 1rem;
+  }
   &:before {
     position: absolute;
     z-index: -1;
-    content:'';
+    //content:'';
     display: block;
     left:1rem;
     right:100%;
@@ -24,6 +28,9 @@ body {
     height:.5em;
     background-color: $primary-color;
     transition:right .2s ease-in;
+    @include breakpoint(tablet) {
+      content:'';
+    }
   }
   &:hover {
     &:before {
@@ -47,4 +54,14 @@ body {
   @include breakpoint('tablet') {
     margin-left: 25%;
   }
+}
+
+.nyilaslink {
+  .icon {
+    font-size: .75em;
+    margin-right: .25em;
+  }
+}
+.namivideo {
+  margin-bottom: 4rem;
 }

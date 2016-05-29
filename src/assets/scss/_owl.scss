@@ -1,11 +1,12 @@
 .owl-plakatok {
   margin:2rem 0;
   .item {
-
+    //text-align: center;
     > a {
       //display: block;
       img {
         display: block;
+        margin:0 auto;
 
       }
     }
@@ -37,7 +38,14 @@
       }
 
       > div {
-
+        .icon {
+          font-size: 2rem;
+          color:$primary-color;
+          text-shadow: 0 0 .5em rgba(#000,.125);
+          &:hover, &:focus {
+            color:$anchor-color-hover;
+          }
+        }
       }
       > .owl-prev {
         float:left;

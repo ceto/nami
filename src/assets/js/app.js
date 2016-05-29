@@ -3,7 +3,7 @@ $(document).foundation();
 $(document).ready(function() {
   $('.owl-plakatok').owlCarousel({
       navigation : true,
-      //navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
+      navigationText: ['<i class="icon icon--arrow-left"></i>','<i class="icon icon--arrow-right"></i>'],
       pagination: true,
       paginationSpeed : 400,
       singleItem:true,

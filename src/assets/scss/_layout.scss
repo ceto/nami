@@ -1,3 +1,17 @@
+body {
+  @include breakpoint(large) {
+    background-attachment: fixed;
+    background-position: -6.5vw bottom;
+    background-repeat: no-repeat;
+    background-image: url('../img/raster.svg');
+    background-size: 25vw;
+  }
+}
+
+#program, #plakatok, #videok {
+  background-color: rgba($white,1);
+}
+
 .top-bar {
   width:100%;
   //height:inherit;
@@ -31,10 +45,37 @@
   color:$body-font-color;
   font-style: normal;
   font-weight: $global-weight-black;
-  position: absolute;
-  margin-top: 3rem;
-  .is-stuck & {
-    display: none;
+  //position: absolute;
+  margin-bottom: 1rem;
+  // .is-stuck & {
+  //   display: none;
+  // }
+}
+
+.top-bar-title {
+  float:none;
+  @include breakpoint(medium) {
+    float:left !important;
+  }
+}
+.csiki {
+  float:right;
+  margin-top: .5rem;
+}
+
+
+.menu > li {
+  display: block;
+  float:left;
+  font-size: .75rem;
+  @include breakpoint(tablet) {
+    float:none;
+    font-size: 1rem;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  > a {
+
   }
 }
 
@@ -44,18 +85,26 @@ main[role="main"] {
  // z-index: -1;
   margin-top: 3rem;
 
+
+
   @include breakpoint(tablet) {
       margin-top:0;
   }
+
+
 }
 .ps {
   @include clearfix();
   position: relative;
   padding-top: 6rem;
   padding-bottom: 6rem;
-  border-bottom: 1px solid $light-gray;
+  //border-bottom: 1px solid $light-gray;
   @include breakpoint(tablet) {
     padding:0;
+
+
+
+
   }
 }
 
@@ -64,11 +113,7 @@ main[role="main"] {
   @include breakpoint(tablet) {
     margin:32vh 0 18vh;
     min-height: 50vh;
-    // position: absolute;
-    // left:0;
-    // width:100%;
-    // top: 50%;
-    // transform:translateY(-50%);
+
   }
 
 }
@@ -78,3 +123,12 @@ main[role="main"] {
     margin:18vh 0 18vh;
   }
 }
+.ps__inner--nulltopmargin {
+  margin-top:-6rem;
+  @include breakpoint(tablet) {
+    margin:0 0 18vh;
+  }
+
+}
+
+
