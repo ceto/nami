@@ -36,6 +36,10 @@
         left:-8vw;
         right:-8vw;
       }
+      @include breakpoint(large) {
+        left:-12vw;
+        right:-12vw;
+      }
 
       > div {
         .icon {

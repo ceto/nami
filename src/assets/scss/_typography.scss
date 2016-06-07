@@ -52,7 +52,7 @@ body {
 .lead--sectionlead {
   margin:2rem 0;
   @include breakpoint('tablet') {
-    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 

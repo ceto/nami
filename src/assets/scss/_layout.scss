@@ -1,11 +1,4 @@
 body {
-  @include breakpoint(large) {
-    background-attachment: fixed;
-    background-position: -6.5vw bottom;
-    background-repeat: no-repeat;
-    background-image: url('../img/raster.svg');
-    background-size: 25vw;
-  }
 }
 
 #program, #plakatok, #videok {
@@ -132,3 +125,11 @@ main[role="main"] {
 }
 
 
+#home {
+  @include breakpoint(large) {
+    background-position: right -7vw bottom 0;
+    background-repeat: no-repeat;
+    background-image: url('../img/raster.svg');
+    background-size: 28vw;
+  }
+}
