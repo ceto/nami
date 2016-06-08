@@ -2,7 +2,7 @@ body {
 }
 
 #program, #plakatok, #videok {
-  background-color: rgba($white,1);
+  //background-color: rgba($white,1);
 }
 
 .top-bar {
@@ -27,9 +27,9 @@ body {
 .top-bar__logo {
   width:8rem;
   margin-top: .333rem;
-  //display: none;
+  display: none;
   .is-stuck & {
-    //display: inline-block;
+    display: inline-block;
   }
 }
 
@@ -39,7 +39,8 @@ body {
   font-style: normal;
   font-weight: $global-weight-black;
   //position: absolute;
-  margin-bottom: 1rem;
+  margin-top: 3vh;
+  margin-bottom: 6vh;
   // .is-stuck & {
   //   display: none;
   // }
@@ -124,12 +125,23 @@ main[role="main"] {
 
 }
 
-
 #home {
+  position: relative;
+}
+#home:after {
   @include breakpoint(large) {
-    background-position: right -7vw bottom 0;
+    content: '';
+    display: block;
+    width:42vw;
+    height:42vw;
+    position: absolute;
+    right:0;
+    bottom:-26vw;
+
+    background-position: 10.5vw center;
     background-repeat: no-repeat;
     background-image: url('../img/raster.svg');
-    background-size: 28vw;
+    background-size: 100%;
   }
 }
+
